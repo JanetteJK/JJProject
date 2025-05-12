@@ -1,6 +1,10 @@
+body {
+    overflow: hidden;
+}
+
 p {
     background-repeat: no-repeat;
-    width: 1080px;
+    width: 1500px;
     height: 1080px;
     background-attachment: fixed;
     margin: auto;
@@ -20,8 +24,8 @@ p {
     right: 275px;
 
 
-
 }
+
 label {
     font-family: "Press Start 2P";
 
@@ -37,16 +41,19 @@ button {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 30px;
+    left: 30px;
     font-family: "Press Start 2P";
-
-
-}
-
-.rahap {
     position: fixed;
-    bottom: 0;
-    left: 10px;
-}
+
+    .rahap {
+        position: fixed;
+        bottom: 0;
+        left: 0px;
+    }
+
+    .rahat {
+        position: fixed;
+        bottom: 0;
+        left: 40px
+    }
