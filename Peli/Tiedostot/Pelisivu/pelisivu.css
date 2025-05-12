@@ -49,11 +49,11 @@ footer {
     .rahap {
         position: fixed;
         bottom: 0;
-        left: 0px;
+        left: 0;
     }
 
     .rahat {
         position: fixed;
         bottom: 0;
         left: 40px
-    }
+    }}
