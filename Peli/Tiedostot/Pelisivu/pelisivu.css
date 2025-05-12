@@ -1,4 +1,52 @@
 p {
-    align-content: center;
+    background-repeat: no-repeat;
+    width: 1080px;
+    height: 1080px;
+    background-attachment: fixed;
+    margin: auto;
+    background-size: cover;
+    display: grid;
+    position: absolute;
+    z-index: -1;
+}
 
+.asiakas-container {
+    background-color: transparent;
+    font-family: "Press Start 2P";
+    align-content: space-around;
+    width: 35%;
+    position: fixed;
+    bottom: 150px;
+    right: 275px;
+
+
+
+}
+label {
+    font-family: "Press Start 2P";
+
+}
+
+label:hover {
+    background-color: orange;
+
+}
+
+button {
+    font-family: "Press Start 2P";
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-family: "Press Start 2P";
+
+
+}
+
+.rahap {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
 }

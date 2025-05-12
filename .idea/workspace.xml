@@ -5,25 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00003d16-bc15-4a17-bde9-578a94b8b0f3" name="Changes" comment="muokkauksia aiempiin">
-      <change afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PP.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/HTML-CSS filut/ALOITUSSIVU.html" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Aloitussivu/ALOITUSSIVU.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/HTML-CSS filut/GAMEOVER.html" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/GAMEOVER.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/HTML-CSS filut/OVER.css" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/OVER.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/HTML-CSS filut/PELISIVU.html" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELISIVU.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/HTML-CSS filut/aloitus.css" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Aloitussivu/aloitus.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/HTML-CSS filut/pelisivu.css" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/pelisivu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/JS-filut/PELI.js" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/Kuvat/PP.häviö.png" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PP.häviö.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/Kuvat/PP.png" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Aloitussivu/PP.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/Kuvat/PP.voitto.png" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PP.voitto.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/Kuvat/PPlogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PPlogo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/Kuvat/PPpeli1920.png" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PPpeli1920.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/Kuvat/PPpeli_iso.png" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PPpeli_iso.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/Kuvat/RAHAP..png" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/RAHAP..png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/Kuvat/Taustakuva.png" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/Taustakuva.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/Python-filut/Funktiot/Aloita_peli.py" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Python-filut/Funktiot/Aloita_peli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Peli/Python-filut/Funktiot/Funktiot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Python-filut/Funktiot/Funktiot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELISIVU.html" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELISIVU.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/RAHAP..png" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/RAHAP..png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/pelisivu.css" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/pelisivu.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1747040565640</updated>
       <workItem from="1747040566718" duration="955000" />
-      <workItem from="1747041945823" duration="4235000" />
+      <workItem from="1747041945823" duration="10710000" />
     </task>
     <task id="LOCAL-00001" summary="aloitus">
       <option name="closed" value="true" />
@@ -159,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747049547767</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="muokkauksia aiempiin">
+      <option name="closed" value="true" />
+      <created>1747057208533</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747057208533</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
