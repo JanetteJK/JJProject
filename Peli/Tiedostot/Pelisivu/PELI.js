@@ -1,9 +1,10 @@
 'use strict';
 
+
 /* Pelin alustusfunktio, hakee ensimmäisen asiakkaan nimen ja kysymyksen sekä oikean vastauksen*/
-async function getCustomer() {
+async function getCustomer(person_id) {
   try {
-    const response = await fetch('http://127.0.0.1:3000/hae_nimi/1');
+    const response = await fetch(`http://127.0.0.1:3000/hae_nimi/${person_id}`);
     console.log('hei sinä');
     const data = await response.json();
     console.log(data);
@@ -15,9 +16,9 @@ async function getCustomer() {
   }
 }
 
-async function getQuestion() {
+async function getQuestion(person_id, order_no) {
   try {
-    const kys = await fetch('http://127.0.0.1:3000/kysymys/1/1');
+    const kys = await fetch(`http://127.0.0.1:3000/kysymys/${person_id}/${order_no}`);
     const vastaus = await kys.json();
 
     let kysymys = document.querySelector('#asiakas-kysymys');
@@ -26,10 +27,11 @@ async function getQuestion() {
     console.error('Error fetching data', error);
   }
 }
-
+getCustomer(1)
+getQuestion(1,1)
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
 
-async function checkAnswer() {
+/*async function checkAnswer() {
   try {
     const response = await fetch ('http://127.0.0.1:3000/oikea_vastaus/1');
     const vastaus = await response.json();
@@ -42,13 +44,14 @@ async function checkAnswer() {
 *  - palkka +5e
 *  - jos yrityksiä 0 niin palkka +15e */
 
-let onButtonClick = function() {
+/*let onButtonClick = function() {
   let person_id = 1;
   let order_no = 1;
   let tries = 0;
   let max_tries = 3;
 
 }
+
   /* polku sille mitä tapahtuu kun vastaus väärin + tarkistaa että yrityksiä on alle 3 */
 
   /* jos yrityksiä 3 häviö ruutu */
