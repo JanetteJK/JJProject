@@ -30,6 +30,7 @@ def hae_kysymys(person_id, order_no):
     ans = {
         "kysymys":kysymys
     }
+    print(ans)
     json_ans = json.dumps(ans)
     response = Response(response=json_ans, status=200, mimetype="application/json")
     response.headers["Content-Type"] = "charset=utf-8"
@@ -47,6 +48,7 @@ def hae_oikea_vastaus(person_id):
     ans = {
         "oikea":oikea_vastaus
     }
+
     json_ans = json.dumps(ans)
     response = Response(response=json_ans, status=200, mimetype="application/json")
     response.headers["Content-Type"] = "charset=utf-8"
@@ -65,6 +67,7 @@ def hae_asiakkaan_nimi(person_id):
     ans = {
         "nimi":nimi
     }
+    print(ans)
     json_ans = json.dumps(ans)
     response = Response(response=json_ans, status=200, mimetype="application/json")
     response.headers["Content-Type"] = "charset=utf-8"
