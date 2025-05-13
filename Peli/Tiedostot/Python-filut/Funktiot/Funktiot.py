@@ -23,14 +23,13 @@ def hae_kysymys(person_id, order_no):
     conn = get_db_connection()
     cursor = conn.cursor()
     query = f"SELECT question FROM question WHERE person_id = '{person_id}' AND Order_No = '{order_no}'"
-    cursor.execute(query, (person_id, order_no))
+    cursor.execute(query)
     kysymys = cursor.fetchone()
     conn.close()
 
     ans = {
         "kysymys":kysymys
     }
-    print(ans)
     json_ans = json.dumps(ans)
     response = Response(response=json_ans, status=200, mimetype="application/json")
     response.headers["Content-Type"] = "charset=utf-8"
@@ -60,7 +59,7 @@ def hae_asiakkaan_nimi(person_id):
     conn = get_db_connection()
     cursor = conn.cursor()
     query = f"SELECT nimi FROM person WHERE id = '{person_id}'"
-    cursor.execute(query, (person_id,))
+    cursor.execute(query, person_id)
     nimi = cursor.fetchone()
     conn.close()
 

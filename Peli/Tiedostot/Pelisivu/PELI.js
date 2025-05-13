@@ -4,14 +4,14 @@
 async function prepGame() {
   try {
     const response = await fetch('http://127.0.0.1:3000/hae_nimi/1');
-    console.log(response)
+    console.log("hei sinä")
     const data = await response.json();
     console.log(data)
 
     let nimi = document.querySelector("#asiakas-nimi")
     nimi.innerHTML = data.nimi
 
-    const kys = await fetch('http://127.0.0.1:3000/hae_kysymys/1/1')
+    const kys = await fetch('http://127.0.0.1:3000/kysymys/1/1')
     console.log(kys)
     const vastaus = await response.json();
     console.log(vastaus)
@@ -38,3 +38,4 @@ async function prepGame() {
 
 /* loppuruutu kun asiakas 10 vastattu oikein */
 
+prepGame()
