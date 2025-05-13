@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00003d16-bc15-4a17-bde9-578a94b8b0f3" name="Changes" comment="nimi tulee kysymys ei" />
+    <list default="true" id="00003d16-bc15-4a17-bde9-578a94b8b0f3" name="Changes" comment="nimi tulee kysymys ei">
+      <change beforePath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELI.js" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELI.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +133,7 @@
       <updated>1747040565640</updated>
       <workItem from="1747040566718" duration="955000" />
       <workItem from="1747041945823" duration="16977000" />
-      <workItem from="1747130230141" duration="4176000" />
+      <workItem from="1747130230141" duration="4749000" />
     </task>
     <task id="LOCAL-00001" summary="aloitus">
       <option name="closed" value="true" />
@@ -237,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747134040507</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="nimi tulee kysymys ei">
+      <option name="closed" value="true" />
+      <created>1747134681219</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1747134681219</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

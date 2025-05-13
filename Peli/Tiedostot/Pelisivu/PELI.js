@@ -12,9 +12,7 @@ async function prepGame() {
     nimi.innerHTML = data.nimi
 
     const kys = await fetch('http://127.0.0.1:3000/kysymys/1/1')
-    console.log(kys)
-    const vastaus = await response.json();
-    console.log(vastaus)
+    const vastaus = await kys.json();
 
     let kysymys = document.querySelector("#asiakas-kysymys")
     kysymys.innerHTML = vastaus.kysymys
