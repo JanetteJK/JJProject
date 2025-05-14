@@ -86,15 +86,20 @@ const onButtonClick = function(person_id, order_no, rahat, tries, max_tries) {
         person_id += 1;
         order_no === 1;
         tries === 0;
+        getCustomer(person_id)
+        getQuestion(person_id, order_no)
       } else {
         addMoney();
         person_id += 1;
         order_no === 1;
         tries === 0;
+        getCustomer(person_id)
+        getQuestion(person_id, order_no)
       }
     } else {
       tries += 1;
       order_no += 1;
+      getQuestion(person_id, order_no)
     }
   }
   if (tries === 3) {
@@ -102,6 +107,8 @@ const onButtonClick = function(person_id, order_no, rahat, tries, max_tries) {
 }
 }
 
+const button = document.querySelector('#button')
+button.addEventListener("click", onButtonClick)
 
 
 /* polku sille mitä tapahtuu jos vastaus on oikein
