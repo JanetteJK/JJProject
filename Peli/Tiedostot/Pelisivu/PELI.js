@@ -64,10 +64,8 @@ function addTip(rahat) {
   let tries = 0;
   let max_tries = 3;
 
-
 getCustomer(person_id)
 getQuestion(person_id, order_no)
-
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
 
@@ -103,11 +101,8 @@ const onButtonClick = function(person_id, order_no, rahat, tries, max_tries) {
 
 }
 }
-;
-window.onload = function() {
-  const button = document.querySelector('#button');
-  button.addEventListener('click', onButtonClick);
-}
+
+
 
 /* polku sille mitä tapahtuu jos vastaus on oikein
 *  - palkka +5e
