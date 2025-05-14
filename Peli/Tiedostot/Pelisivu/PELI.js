@@ -32,8 +32,7 @@ async function getQuestion(person_id, order_no) {
 /*hakee oikean vastauksen tietokannasta*/
 async function getAnswer(person_id) {
   try {
-    const answ = await fetch(
-        `http://127.0.0.1:3000/oikea_vastaus/${person_id}`);
+    const answ = await fetch(`http://127.0.0.1:3000/oikea_vastaus/${person_id}`);
     const vastaus = await answ.json();
     console.log(vastaus)
     return vastaus;
@@ -67,7 +66,7 @@ let max_tries = 3;
 
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
-const button = document.getElementById('button');
+
 
 window.onload = function() {
   document.getElementById('rahat').innerHTML = rahat + '€';
@@ -77,7 +76,7 @@ window.onload = function() {
 const onButtonClick = function() {
   getCustomer(person_id)
   getQuestion(order_no)
-  let country = document.getElementById('countries').value;
+  let country = document.getElementById("countries").value;
   const oikea = getAnswer({person_id});
   while (tries < max_tries) {
     if (country === oikea) {
@@ -103,8 +102,10 @@ const onButtonClick = function() {
 }
 }
 ;
-button.addEventListener('click', onButtonClick);
-
+window.onload = function() {
+  const button = document.querySelector('#button');
+  button.addEventListener('click', onButtonClick);
+}
 
 /* polku sille mitä tapahtuu jos vastaus on oikein
 *  - palkka +5e
