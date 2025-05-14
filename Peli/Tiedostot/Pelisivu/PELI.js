@@ -77,19 +77,22 @@ window.onload = function() {
 
 const onButtonClick = function(person_id, order_no, rahat, tries, max_tries) {
   let country = document.getElementById("countries").value;
-  const oikea = getAnswer({person_id});
+  let person = person_id
+  console.log(country)
+  const oikea = getAnswer({person});
+  console.log(oikea)
   while (tries < max_tries) {
     if (country === oikea) {
       if (tries === 0) {
-        addMoney();
-        addTip();
+        addMoney(rahat);
+        addTip(rahat);
         person_id += 1;
         order_no === 1;
         tries === 0;
         getCustomer(person_id)
         getQuestion(person_id, order_no)
       } else {
-        addMoney();
+        addMoney(rahat);
         person_id += 1;
         order_no === 1;
         tries === 0;
@@ -106,10 +109,10 @@ const onButtonClick = function(person_id, order_no, rahat, tries, max_tries) {
 
 }
 }
-
-const button = document.querySelector('#button')
-button.addEventListener("click", onButtonClick)
-
+window.onload = function() {
+  const button = document.querySelector('#button')
+  button.addEventListener("click", onButtonClick)
+}
 
 /* polku sille mitä tapahtuu jos vastaus on oikein
 *  - palkka +5e

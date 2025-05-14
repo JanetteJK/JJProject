@@ -40,7 +40,7 @@ def hae_oikea_vastaus(person_id):
     conn = get_db_connection()
     cursor = conn.cursor()
     query = f"SELECT answer FROM answer WHERE person_id = '{person_id}' AND correct = 1"
-    cursor.execute(query, person_id)
+    cursor.execute(query)
     oikea_vastaus = cursor.fetchone()
     conn.close()
 
