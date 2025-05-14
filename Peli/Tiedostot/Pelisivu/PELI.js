@@ -67,17 +67,17 @@ let max_tries = 3;
 
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
-const button = document.getElementById('button').value;
+const button = document.getElementById('button');
 
 window.onload = function() {
   document.getElementById('rahat').innerHTML = rahat + '€';
-  button.addEventListener('click', onButtonClick);
+
 };
 
 const onButtonClick = function() {
   getCustomer(person_id)
   getQuestion(order_no)
-  let country = document.getElementById('countries')
+  let country = document.getElementById('countries').value;
   const oikea = getAnswer({person_id});
   while (tries < max_tries) {
     if (country === oikea) {
@@ -103,7 +103,7 @@ const onButtonClick = function() {
 }
 }
 ;
-
+button.addEventListener('click', onButtonClick);
 
 
 /* polku sille mitä tapahtuu jos vastaus on oikein
