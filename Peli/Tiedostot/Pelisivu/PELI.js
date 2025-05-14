@@ -35,8 +35,9 @@ async function getAnswer(person_id) {
     const answ = await fetch(
         `http://127.0.0.1:3000/oikea_vastaus/${person_id}`);
     const vastaus = await answ.json();
-    console.log(vastaus)
-    return vastaus;
+    const oikea = vastaus.oikea
+    console.log(oikea)
+    return oikea;
   } catch (error) {
     console.error('Error fetching data', error);
   }
@@ -78,7 +79,6 @@ window.onload = function() {
   document.getElementById('rahat').innerHTML = rahat + '€';
 
 };
-
 
 
 function onButtonClick(person_id, answer) {
@@ -129,3 +129,5 @@ window.onload = function() {
 /* jos yrityksiä 3 häviö ruutu */
 
 /* loppuruutu kun asiakas 10 vastattu oikein */
+
+

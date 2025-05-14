@@ -43,7 +43,6 @@ def hae_oikea_vastaus(person_id):
     cursor.execute(query)
     oikea_vastaus = cursor.fetchone()
     conn.close()
-
     ans = {
         "oikea":oikea_vastaus
     }
