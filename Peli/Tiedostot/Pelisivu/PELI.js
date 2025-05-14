@@ -66,26 +66,29 @@ getQuestion(1, 1)
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
 
+
+
   let rahat = 0;
   let person_id = 1;
   let order_no = 1;
   let tries = 0;
   let max_tries = 3;
-
+  let answer = getAnswer(1)
 window.onload = function() {
   document.getElementById('rahat').innerHTML = rahat + '€';
 
 };
 
-function onButtonClick() {
+
+
+function onButtonClick(person_id, answer) {
 
 
   let country = document.getElementById("countries").value;
   console.log(country)
-  const oikea = getAnswer({person_id});
-  console.log(oikea)
+  console.log(answer)
   while (tries < max_tries) {
-    if (country === oikea) {
+    if (country === answer) {
       if (tries === 0) {
         addMoney(rahat);
         addTip(rahat);
@@ -114,7 +117,7 @@ function onButtonClick() {
 }
 window.onload = function() {
   const button = document.querySelector('#button')
-  button.addEventListener("click", onButtonClick)
+  button.addEventListener("click", onButtonClick(person_id, answer))
 }
 
 /* polku sille mitä tapahtuu jos vastaus on oikein

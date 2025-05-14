@@ -47,6 +47,7 @@ def hae_oikea_vastaus(person_id):
     ans = {
         "oikea":oikea_vastaus
     }
+
     print(ans)
     json_ans = json.dumps(ans)
     response = Response(response=json_ans, status=200, mimetype="application/json")
