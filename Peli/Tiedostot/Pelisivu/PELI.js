@@ -35,6 +35,7 @@ async function getAnswer(person_id) {
     const answ = await fetch(
         `http://127.0.0.1:3000/oikea_vastaus/${person_id}`);
     const vastaus = await answ.json();
+    console.log(vastaus)
     return vastaus;
   }
   catch (error) {
@@ -76,9 +77,10 @@ window.onload = function() {
 const onButtonClick = function() {
   getCustomer(person_id)
   getQuestion(order_no)
-  let oikea = getAnswer({person_id});
+  let country = document.getElementById('countries')
+  const oikea = getAnswer({person_id});
   while (tries < max_tries) {
-    if (button === oikea) {
+    if (country === oikea) {
       if (tries === 0) {
         addMoney();
         addTip();
