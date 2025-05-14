@@ -75,7 +75,7 @@ window.onload = function() {
 
 };
 
-const onButtonClick = function(person_id, order_no, rahat, tries, max_tries) {
+function onButtonClick(person_id, order_no, rahat, tries, max_tries) {
   let country = document.getElementById("countries").value;
   let person = person_id
   console.log(country)
