@@ -65,10 +65,8 @@ function addTip(rahat) {
   let max_tries = 3;
 
 
-window.onload = function(person_id, order_no) {
-  getCustomer(person_id)
-  getQuestion(order_no)
-}
+getCustomer(person_id)
+getQuestion(person_id, order_no)
 
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
