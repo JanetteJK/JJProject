@@ -58,11 +58,17 @@ function addTip(rahat) {
   return palauta;
 }
 
-let rahat = 0;
-let person_id = 1;
-let order_no = 1;
-let tries = 0;
-let max_tries = 3;
+  let rahat = 0;
+  let person_id = 1;
+  let order_no = 1;
+  let tries = 0;
+  let max_tries = 3;
+
+
+window.onload = function(person_id, order_no) {
+  getCustomer(person_id)
+  getQuestion(order_no)
+}
 
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
@@ -73,9 +79,7 @@ window.onload = function() {
 
 };
 
-const onButtonClick = function() {
-  getCustomer(person_id)
-  getQuestion(order_no)
+const onButtonClick = function(person_id, order_no, rahat, tries, max_tries) {
   let country = document.getElementById("countries").value;
   const oikea = getAnswer({person_id});
   while (tries < max_tries) {
