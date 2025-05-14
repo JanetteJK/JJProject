@@ -1,6 +1,6 @@
 'use strict';
 
-/* hakee ensimmäisen asiakkaan nimen*/
+/* hakee ensimmäisen asiakkaan nimen */
 async function getCustomer(person_id) {
   try {
     const response = await fetch(`http://127.0.0.1:3000/hae_nimi/${person_id}`);
@@ -36,7 +36,8 @@ async function getAnswer(person_id) {
         `http://127.0.0.1:3000/oikea_vastaus/${person_id}`);
     const vastaus = await answ.json();
     return vastaus;
-  } catch (error) {
+  }
+  catch (error) {
     console.error('Error fetching data', error);
   }
 }
@@ -73,6 +74,8 @@ window.onload = function() {
 };
 
 const onButtonClick = function() {
+  getCustomer(person_id)
+  getQuestion(order_no)
   let oikea = getAnswer({person_id});
   while (tries < max_tries) {
     if (button === oikea) {
