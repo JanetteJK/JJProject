@@ -58,14 +58,10 @@ function addTip(rahat) {
   return palauta;
 }
 
-  let rahat = 0;
-  let person_id = 1;
-  let order_no = 1;
-  let tries = 0;
-  let max_tries = 3;
 
-getCustomer(person_id)
-getQuestion(person_id, order_no)
+
+getCustomer(1)
+getQuestion(1, 1)
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
 
@@ -75,11 +71,16 @@ window.onload = function() {
 
 };
 
-function onButtonClick(person_id, order_no, rahat, tries, max_tries) {
+function onButtonClick() {
+  let rahat = 0;
+  let person_id = 1;
+  let order_no = 1;
+  let tries = 0;
+  let max_tries = 3;
+
   let country = document.getElementById("countries").value;
-  let person = person_id
   console.log(country)
-  const oikea = getAnswer({person});
+  const oikea = getAnswer({person_id});
   console.log(oikea)
   while (tries < max_tries) {
     if (country === oikea) {
