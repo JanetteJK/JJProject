@@ -32,15 +32,16 @@ async function getQuestion(person_id, order_no) {
 /*hakee oikean vastauksen tietokannasta*/
 async function getAnswer(person_id) {
   try {
-    const answ = await fetch(`http://127.0.0.1:3000/oikea_vastaus/${person_id}`);
+    const answ = await fetch(
+        `http://127.0.0.1:3000/oikea_vastaus/${person_id}`);
     const vastaus = await answ.json();
     console.log(vastaus)
     return vastaus;
-  }
-  catch (error) {
+  } catch (error) {
     console.error('Error fetching data', error);
   }
 }
+console.log(getAnswer(1))
 
 /* Palkan lisäys funktio */
 
@@ -65,6 +66,11 @@ getQuestion(1, 1)
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
 
+  let rahat = 0;
+  let person_id = 1;
+  let order_no = 1;
+  let tries = 0;
+  let max_tries = 3;
 
 window.onload = function() {
   document.getElementById('rahat').innerHTML = rahat + '€';
@@ -72,11 +78,7 @@ window.onload = function() {
 };
 
 function onButtonClick() {
-  let rahat = 0;
-  let person_id = 1;
-  let order_no = 1;
-  let tries = 0;
-  let max_tries = 3;
+
 
   let country = document.getElementById("countries").value;
   console.log(country)
