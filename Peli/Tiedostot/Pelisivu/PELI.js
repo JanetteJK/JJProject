@@ -47,18 +47,16 @@ console.log(getAnswer(1));
 
 /* Palkan lisäys funktio */
 
-function addMoney(rahat) {
-  const palkka = 5;
-  const palauta = rahat + palkka;
-  return palauta;
+function addMoney() {
+  rahat += 5
+  document.getElementById('rahat').innerHTML = rahat + '€';
 }
 
 /* Tipin lisäys funktio */
 
-function addTip(rahat) {
-  const tippi = 15;
-  const palauta = rahat + tippi;
-  return palauta;
+function addTip() {
+  rahat += 15;
+  document.getElementById('rahat').innerHTML = rahat + '€';
 }
 
 
@@ -70,22 +68,20 @@ function addTip(rahat) {
   let tries = 0;
   let max_tries = 3;
 
-
-
 async function mainGame(value) {
   let country = value;
   let answer = await getAnswer(person_id);
   if (answer.includes(country)) {
     if (tries === 0) {
-      addMoney(rahat);
-      addTip(rahat);
+      addMoney();
+      addTip();
       person_id += 1;
       order_no = 1;
       tries = 0;
       getCustomer(person_id);
       getQuestion(person_id, order_no);
     } else if (tries <= max_tries) {
-      addMoney(rahat);
+      addMoney();
       person_id += 1;
       order_no = 1;
       tries = 0;
