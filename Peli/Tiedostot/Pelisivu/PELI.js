@@ -113,9 +113,11 @@ function mainGame() {
         }
 
     }
+
+    window.onload = function() {
         const button = document.querySelector('#button')
         button.addEventListener("click", onButtonClick(answer))
-
+    }
 }
 mainGame()
 
