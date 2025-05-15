@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00003d16-bc15-4a17-bde9-578a94b8b0f3" name="Changes" comment="yritys pääfunktiole">
+    <list default="true" id="00003d16-bc15-4a17-bde9-578a94b8b0f3" name="Changes" comment="osaa verrata vastauksia">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELI.js" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELI.js" afterDir="false" />
+    </list>
+    <list id="fb9e7c0b-adbb-4418-af45-daf8f9d4475b" name="Changes by julij" comment="">
+      <change beforePath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELISIVU.html" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELISIVU.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +138,7 @@
       <workItem from="1747040566718" duration="955000" />
       <workItem from="1747041945823" duration="16977000" />
       <workItem from="1747130230141" duration="14630000" />
-      <workItem from="1747211302273" duration="15616000" />
+      <workItem from="1747211302273" duration="18269000" />
     </task>
     <task id="LOCAL-00001" summary="aloitus">
       <option name="closed" value="true" />
@@ -393,7 +396,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747236826011</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="osaa verrata vastauksia">
+      <option name="closed" value="true" />
+      <created>1747312055093</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1747312055095</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,9 +423,10 @@
     <MESSAGE value="pelin alustus toimii" />
     <MESSAGE value="eka yritys pääfunktiole" />
     <MESSAGE value="yritys pääfunktiole" />
-    <option name="LAST_COMMIT_MESSAGE" value="yritys pääfunktiole" />
+    <MESSAGE value="osaa verrata vastauksia" />
+    <option name="LAST_COMMIT_MESSAGE" value="osaa verrata vastauksia" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JJProject$Funktiot.coverage" NAME="Funktiot Coverage Results" MODIFIED="1747311844371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Peli/Tiedostot/Python-filut/Funktiot" />
+    <SUITE FILE_PATH="coverage/JJProject$Funktiot.coverage" NAME="Funktiot Coverage Results" MODIFIED="1747315601726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Peli/Tiedostot/Python-filut/Funktiot" />
   </component>
 </project>

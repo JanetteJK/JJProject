@@ -66,7 +66,7 @@ getQuestion(1, 1)
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
 
-
+function mainGame() {
 
   let rahat = 0;
   let person_id = 1;
@@ -74,13 +74,6 @@ getQuestion(1, 1)
   let tries = 0;
   let max_tries = 3;
   let answer = getAnswer(1)
-window.onload = function() {
-  document.getElementById('rahat').innerHTML = rahat + '€';
-
-};
-
-
-function onButtonClick(person_id, answer) {
 
 
   let country = document.getElementById("countries").value;
@@ -114,6 +107,21 @@ function onButtonClick(person_id, answer) {
   if (tries === 3) {
 
 }
+
+}
+window.onload = function() {
+  document.getElementById('rahat').innerHTML = rahat + '€';
+
+};
+
+onButtonClick(1,[1,2])
+function onButtonClick(answer, country) {
+  Boolean(answer.includes(country)); {
+    console.log(Boolean)
+  return Boolean
+  }
+
+
 }
 window.onload = function() {
   const button = document.querySelector('#button')
