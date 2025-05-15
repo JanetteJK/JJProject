@@ -101,8 +101,8 @@ function mainGame() {
         order_no += 1;
         getQuestion(person_id, order_no)
 }
-}
-if (tries === 3) {
+
+    else if (tries === 3) {
     getQuestion(person_id, 4)
 
 }
