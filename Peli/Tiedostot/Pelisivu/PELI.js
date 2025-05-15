@@ -2,134 +2,133 @@
 
 /* hakee ensimmäisen asiakkaan nimen */
 async function getCustomer(person_id) {
-    try {
-        const response = await fetch(`http://127.0.0.1:3000/hae_nimi/${person_id}`);
-        console.log('hei sinä');
-        const data = await response.json();
-        console.log(data);
+  try {
+    const response = await fetch(`http://127.0.0.1:3000/hae_nimi/${person_id}`);
+    console.log('hei sinä');
+    const data = await response.json();
+    console.log(data);
 
-        let nimi = document.querySelector('#asiakas-nimi');
-        nimi.innerHTML = data.nimi;
-    } catch (error) {
-        console.error('Error fetching data', error);
-    }
+    let nimi = document.querySelector('#asiakas-nimi');
+    nimi.innerHTML = data.nimi;
+  } catch (error) {
+    console.error('Error fetching data', error);
+  }
 }
 
 /*hakee asiakkaan kysymyksen id ja order_no perusteella*/
 async function getQuestion(person_id, order_no) {
-    try {
-        const kys = await fetch(
-            `http://127.0.0.1:3000/kysymys/${person_id}/${order_no}`);
-        const vastaus = await kys.json();
+  try {
+    const kys = await fetch(
+        `http://127.0.0.1:3000/kysymys/${person_id}/${order_no}`);
+    const vastaus = await kys.json();
 
-        let kysymys = document.querySelector('#asiakas-kysymys');
-        kysymys.innerHTML = vastaus.kysymys
-    } catch (error) {
-        console.error('Error fetching data', error);
-    }
+    let kysymys = document.querySelector('#asiakas-kysymys');
+    kysymys.innerHTML = vastaus.kysymys;
+  } catch (error) {
+    console.error('Error fetching data', error);
+  }
 }
 
 /*hakee oikean vastauksen tietokannasta*/
 async function getAnswer(person_id) {
-    try {
-        const answ = await fetch(
-            `http://127.0.0.1:3000/oikea_vastaus/${person_id}`);
-        const vastaus = await answ.json();
-        const oikea = vastaus.oikea
-        console.log(oikea)
-        return oikea;
-    } catch (error) {
-        console.error('Error fetching data', error);
-    }
+  try {
+    const answ = await fetch(
+        `http://127.0.0.1:3000/oikea_vastaus/${person_id}`);
+    const vastaus = await answ.json();
+    const oikea = vastaus.oikea;
+    console.log(oikea);
+    return oikea;
+  } catch (error) {
+    console.error('Error fetching data', error);
+  }
 }
 
-console.log(getAnswer(1))
+console.log(getAnswer(1));
 
 /* Palkan lisäys funktio */
 
 function addMoney(rahat) {
-    const palkka = 5;
-    const palauta = rahat + palkka;
-    return palauta;
+  const palkka = 5;
+  const palauta = rahat + palkka;
+  return palauta;
 }
 
 /* Tipin lisäys funktio */
 
 function addTip(rahat) {
-    const tippi = 15;
-    const palauta = rahat + tippi;
-    return palauta;
+  const tippi = 15;
+  const palauta = rahat + tippi;
+  return palauta;
 }
 
-
-getCustomer(1)
-getQuestion(1, 1)
+getCustomer(1);
+getQuestion(1, 1);
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
 
-async function mainGame() {
-    try {
-        let rahat = 0;
-        window.onload = function() {
-            document.getElementById('rahat').innerHTML = rahat + '€';
-        }
-        let person_id = 1;
-        let order_no = 1;
-        let tries = 0;
-        let max_tries = 3;
-        let answer = getAnswer(person_id)
+function mainGame() {
 
+  let rahat = 0;
+  window.onload = function() {
+    document.getElementById('rahat').innerHTML = rahat + '€';
+    ;
+  };
+  let person_id = 1;
+  let order_no = 1;
+  let tries = 0;
+  let max_tries = 3;
+  let answer = getAnswer(person_id);
 
-
-        if (onButtonClick(answer) === true)
-            if (tries === 0) {
-                addMoney(rahat);
-                addTip(rahat);
-                person_id += 1;
-                order_no === 1;
-                tries === 0;
-                getCustomer(person_id)
-                getQuestion(person_id, order_no)
-            } else if (tries <= max_tries) {
-                addMoney(rahat);
-                person_id += 1;
-                order_no = 1;
-                tries = 0;
-                getCustomer(person_id)
-                getQuestion(person_id, order_no)
-            } else if (tries < 3) {
-                tries = tries + 1;
-                order_no += 1;
-                getQuestion(person_id, order_no)
-            } else if (tries === 3) {
-                getQuestion(person_id, 4)
-
-            }
-
-
-
-
-
-    function onButtonClick(answer) {
-        let country = document.getElementById("countries").value;
-        if (answer.includes(country)) {
-            return true
-        }
-        else {
-            return false
-        }
+  if (onButtonClick(answer) ===
+      true) {
+    if (tries === 0) {
+      addMoney(rahat);
+      addTip(rahat);
+      person_id += 1;
+      order_no = 1;
+      tries = 0;
+      getCustomer(person_id);
+      getQuestion(person_id, order_no);
+    } else if (tries <= max_tries) {
+      addMoney(rahat);
+      person_id += 1;
+      order_no = 1;
+      tries = 0;
+      getCustomer(person_id);
+      getQuestion(person_id, order_no);
+    } else if (tries < 3) {
+      tries = tries + 1;
+      order_no += 1;
+      getQuestion(person_id, order_no);
+    } else if (tries === 3) {
+      getQuestion(person_id, 4);
     }
+  }else {
+    tries = tries += 1;
+    max_tries = max_tries -= 1;
+    order_no += 1;
+    getQuestion(order_no);
+  }
 
+  function getValue() {
+    let value = document.getElementById("countries").value
+    return value
+  }
 
-        const button = document.querySelector('#button')
-        button.addEventListener("click", onButtonClick)
+  function onButtonClick(answer){
+    let country = getValue()
+    if (answer.includes(country)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
+  const button = document.querySelector('#button');
+  button.addEventListener('click', onButtonClick);
 }
-catch (error)
-        {
-            console.error('Error fetching data', error);
-        }}
-mainGame()
+
+mainGame();
 
 /* polku sille mitä tapahtuu jos vastaus on oikein
 *  - palkka +5e
@@ -140,5 +139,9 @@ mainGame()
 /* jos yrityksiä 3 häviö ruutu */
 
 /* loppuruutu kun asiakas 10 vastattu oikein */
+
+
+
+
 
 
