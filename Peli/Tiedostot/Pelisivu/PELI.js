@@ -48,7 +48,7 @@ console.log(getAnswer(1));
 /* Palkan lisäys funktio */
 
 function addMoney() {
-  rahat += 5
+  rahat += 5;
   document.getElementById('rahat').innerHTML = rahat + '€';
 }
 
@@ -59,14 +59,18 @@ function addTip() {
   document.getElementById('rahat').innerHTML = rahat + '€';
 }
 
+function gameOver() {
+  window.location.replace("http://localhost:63342/JJProject/Peli/Tiedostot/Pelisivu/GAMEOVER.html")
+}
+
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
 
-  let rahat = 0;
-  let person_id = 1;
-  let order_no = 1;
-  let tries = 0;
-  let max_tries = 3;
+let rahat = 0;
+let person_id = 1;
+let order_no = 1;
+let tries = 0;
+const max_tries = 2;
 
 async function mainGame(value) {
   let country = value;
@@ -87,26 +91,27 @@ async function mainGame(value) {
       tries = 0;
       getCustomer(person_id);
       getQuestion(person_id, order_no);
-    } else if (tries < 3) {
-      tries = tries + 1;
-      order_no += 1;
-      getQuestion(person_id, order_no);
-    } else if (tries === 3) {
-      getQuestion(person_id, 4);
     }
   } else {
-    tries = tries += 1;
-    max_tries = max_tries -= 1;
-    order_no += 1;
-    getQuestion(order_no);
+    if (tries < max_tries) {
+      tries += 1;
+      order_no += 1;
+      getQuestion(person_id, order_no);
+    } else if (tries === max_tries) {
+      getQuestion(person_id, 4)
+      let button = document.querySelector("button")
+      button.textContent = "Hävisit pelin"
+      button.disabled = true
+      setTimeout(()=> {gameOver()},3000)
+      console.log('jipii game over');
+    }
   }
 }
 
-
-  function onButtonClick() {
-  let value = document.getElementById("countries").value
-   mainGame(value)
-  }
+function onButtonClick() {
+  let value = document.getElementById('countries').value;
+  mainGame(value);
+}
 
 window.onload = function() { /*alustaa pelin sivun latauskerralla*/
   document.getElementById('rahat').innerHTML = rahat + '€';
@@ -114,9 +119,7 @@ window.onload = function() { /*alustaa pelin sivun latauskerralla*/
   getQuestion(1, 1);
   const button = document.querySelector('#button');
   button.addEventListener('click', onButtonClick);
-}
-
-
+};
 
 /* polku sille mitä tapahtuu jos vastaus on oikein
 *  - palkka +5e
