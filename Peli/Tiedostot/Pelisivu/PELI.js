@@ -70,7 +70,9 @@ getQuestion(1, 1)
 function mainGame() {
 
     let rahat = 0;
-    document.getElementById('rahat').innerHTML = rahat + '€';
+    window.onload = function() {
+        document.getElementById('rahat').innerHTML = rahat + '€';
+    }
     let person_id = 1;
     let order_no = 1;
     let tries = 0;
@@ -114,10 +116,10 @@ function mainGame() {
 
     }
 
-    window.onload = function() {
+
         const button = document.querySelector('#button')
         button.addEventListener("click", onButtonClick(answer))
-    }
+
 }
 mainGame()
 
