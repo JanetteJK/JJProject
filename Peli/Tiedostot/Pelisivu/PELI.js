@@ -61,26 +61,21 @@ function addTip(rahat) {
   return palauta;
 }
 
-getCustomer(1);
-getQuestion(1, 1);
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
 
-function mainGame() {
-
   let rahat = 0;
-  window.onload = function() {
-    document.getElementById('rahat').innerHTML = rahat + '€';
-    ;
-  };
   let person_id = 1;
   let order_no = 1;
   let tries = 0;
   let max_tries = 3;
-  let answer = getAnswer(person_id);
 
-  if (onButtonClick(answer) ===
-      true) {
+
+
+async function mainGame(value) {
+  let country = value;
+  let answer = await getAnswer(person_id);
+  if (answer.includes(country)) {
     if (tries === 0) {
       addMoney(rahat);
       addTip(rahat);
@@ -103,32 +98,29 @@ function mainGame() {
     } else if (tries === 3) {
       getQuestion(person_id, 4);
     }
-  }else {
+  } else {
     tries = tries += 1;
     max_tries = max_tries -= 1;
     order_no += 1;
     getQuestion(order_no);
   }
+}
 
-  function getValue() {
-    let value = document.getElementById("countries").value
-    return value
+
+  function onButtonClick() {
+  let value = document.getElementById("countries").value
+   mainGame(value)
   }
 
-  function onButtonClick(answer){
-    let country = getValue()
-    if (answer.includes(country)) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
+window.onload = function() { /*alustaa pelin sivun latauskerralla*/
+  document.getElementById('rahat').innerHTML = rahat + '€';
+  getCustomer(1);
+  getQuestion(1, 1);
   const button = document.querySelector('#button');
   button.addEventListener('click', onButtonClick);
 }
 
-mainGame();
+
 
 /* polku sille mitä tapahtuu jos vastaus on oikein
 *  - palkka +5e
