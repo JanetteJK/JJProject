@@ -23,7 +23,7 @@ async function getQuestion(person_id, order_no) {
     const vastaus = await kys.json();
 
     let kysymys = document.querySelector('#asiakas-kysymys');
-    kysymys.innerHTML = vastaus.kysymys;
+    kysymys.innerHTML = vastaus.kysymys
   } catch (error) {
     console.error('Error fetching data', error);
   }
@@ -61,7 +61,6 @@ function addTip(rahat) {
 }
 
 
-
 getCustomer(1)
 getQuestion(1, 1)
 
@@ -88,7 +87,8 @@ function onButtonClick(person_id, answer) {
   console.log(country)
   console.log(answer)
   while (tries < max_tries) {
-    if (country === answer) {
+    if (answer.includes(country)) {
+      console.log("jipiijihuu")
       if (tries === 0) {
         addMoney(rahat);
         addTip(rahat);
