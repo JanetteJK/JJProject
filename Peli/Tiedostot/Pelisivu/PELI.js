@@ -67,49 +67,52 @@ getQuestion(1, 1)
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
 
-function mainGame() {
-
-    let rahat = 0;
-    window.onload = function() {
-        document.getElementById('rahat').innerHTML = rahat + '€';
-    }
-    let person_id = 1;
-    let order_no = 1;
-    let tries = 0;
-    let max_tries = 3;
-    let answer = getAnswer(1)
-    let country = document.getElementById("countries").value;
-
-
-
-    if (onButtonClick(answer, country) === true)
-        if (tries === 0) {
-            addMoney(rahat);
-            addTip(rahat);
-            person_id += 1;
-            order_no === 1;
-            tries === 0;
-            getCustomer(person_id)
-            getQuestion(person_id, order_no)
-        } else if (tries <= max_tries) {
-            addMoney(rahat);
-            person_id += 1;
-            order_no = 1;
-            tries = 0;
-            getCustomer(person_id)
-            getQuestion(person_id, order_no)
-        } else if (tries < 3) {
-            tries = tries + 1;
-            order_no += 1;
-            getQuestion(person_id, order_no)
-        } else if (tries === 3) {
-            getQuestion(person_id, 4)
-
+async function mainGame() {
+    try {
+        let rahat = 0;
+        window.onload = function() {
+            document.getElementById('rahat').innerHTML = rahat + '€';
         }
+        let person_id = 1;
+        let order_no = 1;
+        let tries = 0;
+        let max_tries = 3;
+        let answer = getAnswer(person_id)
 
 
-    function onButtonClick(answer, country) {
-        if (answer.includes(country)){
+
+        if (onButtonClick(answer) === true)
+            if (tries === 0) {
+                addMoney(rahat);
+                addTip(rahat);
+                person_id += 1;
+                order_no === 1;
+                tries === 0;
+                getCustomer(person_id)
+                getQuestion(person_id, order_no)
+            } else if (tries <= max_tries) {
+                addMoney(rahat);
+                person_id += 1;
+                order_no = 1;
+                tries = 0;
+                getCustomer(person_id)
+                getQuestion(person_id, order_no)
+            } else if (tries < 3) {
+                tries = tries + 1;
+                order_no += 1;
+                getQuestion(person_id, order_no)
+            } else if (tries === 3) {
+                getQuestion(person_id, 4)
+
+            }
+
+
+
+
+
+    function onButtonClick(answer) {
+        let country = document.getElementById("countries").value;
+        if (answer.includes(country)) {
             return true
         }
         else {
@@ -119,9 +122,13 @@ function mainGame() {
 
 
         const button = document.querySelector('#button')
-        button.addEventListener("click", onButtonClick(answer))
+        button.addEventListener("click", onButtonClick)
 
 }
+catch (error)
+        {
+            console.error('Error fetching data', error);
+        }}
 mainGame()
 
 /* polku sille mitä tapahtuu jos vastaus on oikein

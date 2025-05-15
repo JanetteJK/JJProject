@@ -418,7 +418,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747320151729</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="rahat">
+      <option name="closed" value="true" />
+      <created>1747321605628</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1747321605628</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,6 +452,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="rahat" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JJProject$Funktiot.coverage" NAME="Funktiot Coverage Results" MODIFIED="1747319582041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Peli/Tiedostot/Python-filut/Funktiot" />
+    <SUITE FILE_PATH="coverage/JJProject$Funktiot.coverage" NAME="Funktiot Coverage Results" MODIFIED="1747322689671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Peli/Tiedostot/Python-filut/Funktiot" />
   </component>
 </project>
