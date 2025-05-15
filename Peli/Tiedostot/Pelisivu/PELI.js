@@ -78,9 +78,11 @@ function mainGame() {
     let tries = 0;
     let max_tries = 3;
     let answer = getAnswer(1)
+    let country = document.getElementById("countries").value;
 
 
-    if (onButtonClick(answer) === true)
+
+    if (onButtonClick(answer, country) === true)
         if (tries === 0) {
             addMoney(rahat);
             addTip(rahat);
@@ -92,12 +94,12 @@ function mainGame() {
         } else if (tries <= max_tries) {
             addMoney(rahat);
             person_id += 1;
-            order_no === 1;
-            tries === 0;
+            order_no = 1;
+            tries = 0;
             getCustomer(person_id)
             getQuestion(person_id, order_no)
         } else if (tries < 3) {
-            tries = tries += 1;
+            tries = tries + 1;
             order_no += 1;
             getQuestion(person_id, order_no)
         } else if (tries === 3) {
@@ -106,14 +108,13 @@ function mainGame() {
         }
 
 
-    function onButtonClick(answer) {
-        let country = document.getElementById("countries").value;
-        Boolean(answer.includes(country));
-        {
-            console.log(Boolean)
-            return Boolean
+    function onButtonClick(answer, country) {
+        if (answer.includes(country)){
+            return true
         }
-
+        else {
+            return false
+        }
     }
 
 
