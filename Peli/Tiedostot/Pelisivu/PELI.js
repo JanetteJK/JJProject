@@ -70,14 +70,15 @@ getQuestion(1, 1)
 function mainGame() {
 
     let rahat = 0;
+    document.getElementById('rahat').innerHTML = rahat + '€';
     let person_id = 1;
     let order_no = 1;
     let tries = 0;
     let max_tries = 3;
     let answer = getAnswer(1)
-    let country = document.getElementById("countries").value;
 
-    if (onButtonClick(answer, country) === true)
+
+    if (onButtonClick(answer) === true)
         if (tries === 0) {
             addMoney(rahat);
             addTip(rahat);
@@ -93,42 +94,31 @@ function mainGame() {
             tries === 0;
             getCustomer(person_id)
             getQuestion(person_id, order_no)
+        } else if (tries < 3) {
+            tries = tries += 1;
+            order_no += 1;
+            getQuestion(person_id, order_no)
+        } else if (tries === 3) {
+            getQuestion(person_id, 4)
+
         }
 
 
-    else {
-        tries = tries += 1;
-        order_no += 1;
-        getQuestion(person_id, order_no)
-}
+    function onButtonClick(answer) {
+        let country = document.getElementById("countries").value;
+        Boolean(answer.includes(country));
+        {
+            console.log(Boolean)
+            return Boolean
+        }
 
-    else if (tries === 3) {
-    getQuestion(person_id, 4)
-
-}
-
-window.onload = function () {
-    document.getElementById('rahat').innerHTML = rahat + '€';
-
-};
-
-onButtonClick(1, [1, 2])
-
-function onButtonClick(answer, country) {
-    Boolean(answer.includes(country));
-    {
-        console.log(Boolean)
-        return Boolean
     }
 
-
+    window.onload = function() {
+        const button = document.querySelector('#button')
+        button.addEventListener("click", onButtonClick(answer))
+    }
 }
-
-window.onload = function () {
-    const button = document.querySelector('#button')
-    button.addEventListener("click", onButtonClick(answer,country))
-}
-
 mainGame()
 
 /* polku sille mitä tapahtuu jos vastaus on oikein

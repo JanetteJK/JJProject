@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00003d16-bc15-4a17-bde9-578a94b8b0f3" name="Changes" comment="osaa verrata vastauksia">
+    <list default="true" id="00003d16-bc15-4a17-bde9-578a94b8b0f3" name="Changes" comment="tries korjattu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELISIVU.html" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELISIVU.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELI.js" beforeDir="false" afterPath="$PROJECT_DIR$/Peli/Tiedostot/Pelisivu/PELI.js" afterDir="false" />
     </list>
     <list id="fb9e7c0b-adbb-4418-af45-daf8f9d4475b" name="Changes by julij" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -402,7 +402,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747312055095</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="tries korjattu">
+      <option name="closed" value="true" />
+      <created>1747318609505</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1747318609505</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,9 +431,10 @@
     <MESSAGE value="yritys pääfunktiole" />
     <MESSAGE value="osaa verrata vastauksia" />
     <MESSAGE value="Changes by julij" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by julij" />
+    <MESSAGE value="tries korjattu" />
+    <option name="LAST_COMMIT_MESSAGE" value="tries korjattu" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JJProject$Funktiot.coverage" NAME="Funktiot Coverage Results" MODIFIED="1747318499335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Peli/Tiedostot/Python-filut/Funktiot" />
+    <SUITE FILE_PATH="coverage/JJProject$Funktiot.coverage" NAME="Funktiot Coverage Results" MODIFIED="1747318969269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Peli/Tiedostot/Python-filut/Funktiot" />
   </component>
 </project>
