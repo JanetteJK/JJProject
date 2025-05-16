@@ -67,6 +67,57 @@ function gameWin() {
   window.location.replace("http://localhost:63342/JJProject/Peli/Tiedostot/Voittosivu/VOITTO.html")
 }
 
+function map() {
+  var map = L.map('map', {
+    zoomDelta: 0.25,
+    zoomSnap: 0
+  })
+  var cartodbAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>';
+
+  var positron = L.tileLayer(
+      'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+        attribution: cartodbAttribution
+      }).addTo(map);
+
+  map.setView([0, 0], 0);
+
+  var marker1 = L.marker([35.0, 105.0]).addTo(map);
+  marker1.bindPopup("<b>China</b>").openPopup();
+
+  var marker2 = L.marker([64.0, 26.0]).addTo(map);
+  marker2.bindPopup("<b>Finland</b>").openPopup();
+
+  var marker3 = L.marker([-27.0, 133.0]).addTo(map);
+  marker3.bindPopup("<b>Australia</b>").openPopup();
+
+  var marker4 = L.marker([23.0, -102.0]).addTo(map);
+  marker4.bindPopup("<b>Mexico</b>").openPopup();
+
+  var marker6 = L.marker([51.0, 9.0]).addTo(map);
+  marker6.bindPopup("<b>Germany</b>").openPopup();
+
+  var marker7 = L.marker([38.0, -97.0]).addTo(map);
+  marker7.bindPopup("<b>United States</b>").openPopup();
+
+  var marker8 = L.marker([42.8333, 12.8333]).addTo(map);
+  marker8.bindPopup("<b>Italy</b>").openPopup();
+
+  var marker9 = L.marker([53.0, -8.0]).addTo(map);
+  marker9.bindPopup("<b>Ireland</b>").openPopup();
+
+  var marker10 = L.marker([46.0, 2.0]).addTo(map);
+  marker10.bindPopup("<b>France</b>").openPopup();
+
+  var marker11 = L.marker([65.0, -18.0]).addTo(map);
+  marker11.bindPopup("<b>Iceland</b>").openPopup();
+
+  var marker12 = L.marker([27.0, 30.0]).addTo(map);
+  marker12.bindPopup("<b>Egypt</b>").openPopup();
+
+  var marker13 = L.marker([40.0, -4.0]).addTo(map);
+  marker13.bindPopup("<b>Spain</b>").openPopup();
+}
+
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
 
@@ -125,6 +176,7 @@ function onButtonClick() {
 
 window.onload = function() { /*alustaa pelin sivun latauskerralla*/
   document.getElementById('rahat').innerHTML = rahat + '€';
+  map()
   getCustomer(1);
   getQuestion(1, 1);
   const button = document.querySelector('#button');

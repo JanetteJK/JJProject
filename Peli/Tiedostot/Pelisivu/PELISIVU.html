@@ -5,6 +5,12 @@
     <title>Tämä on peli</title>
     <link rel="stylesheet" href="pelisivu.css">
     <script src="PELI.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 </head>
 <body>
 <p id="image" style="background-image: url('Taustakuva.png');"></p>
@@ -18,7 +24,7 @@
         <select id="countries">
             <option value="China">China</option>
             <option value="Finland">Finland</option>
-            <option value="Sweden">Sweden</option>
+            <option value="Australia">Australia</option>
             <option value="Mexico">Mexico</option>
             <option value="Kotka">Kotka</option>
             <option value="Germany">Germany</option>
@@ -34,6 +40,7 @@
     <br>
     <button id="button" type="button">You should travel here</button>
 </div>
+<div id="map"></div>
 <footer>
     <img id="rahap" src="RAHAP..png" alt="kuva rahapussista">
     <p id="rahat">tähän rahat</p>
