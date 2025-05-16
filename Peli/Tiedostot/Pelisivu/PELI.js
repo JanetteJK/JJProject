@@ -63,6 +63,10 @@ function gameOver() {
   window.location.replace("http://localhost:63342/JJProject/Peli/Tiedostot/Pelisivu/GAMEOVER.html")
 }
 
+function gameWin() {
+  window.location.replace("http://localhost:63342/JJProject/Peli/Tiedostot/Voittosivu/VOITTO.html")
+}
+
 
 /* Pääpeli, tarkistaa onko annettu vastaus oikea */
 
@@ -76,6 +80,12 @@ async function mainGame(value) {
   let country = value;
   let answer = await getAnswer(person_id);
   if (answer.includes(country)) {
+    if (person_id > 10){
+      let button = document.querySelector("button")
+      button.textContent = "Voitit pelin"
+      button.disabled = true
+      setTimeout(()=> {gameWin()},3000)
+    }
     if (tries === 0) {
       addMoney();
       addTip();
